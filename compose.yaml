@@ -1,0 +1,16 @@
+name: lo_stato_che_fa
+
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: lo_stato_che_fa
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Imposta POSTGRES_PASSWORD nel file .env}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
