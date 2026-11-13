@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 
 from src.classes.Party import Party
 from src.classes.Government import Government
@@ -17,11 +17,20 @@ def create_party(party_features) -> Party:
         party_name=party_name,
         program_website=program_website,
         party_website=party_website,
-        party_pic_path=party_pic_path,
+        party_pic_path=party_pic_path
     )
 
-def create_government():
-    return 0
+def create_government(gov_features) -> Government:
+    gov_id = validate_int(gov_features["gov_id"])
+    gov_year = validate_string(gov_features["gov_year"])
+    parties_in_charge = gov_features["parties_in_charge"]
+    list_of_acts = gov_features["list_of_acts"]
+    return Government(
+        gov_id=gov_id,
+        gov_year=gov_year,
+        parties_in_charge=parties_in_charge,
+        list_of_acts=list_of_acts
+    )
 
 def create_act():
     return 0
