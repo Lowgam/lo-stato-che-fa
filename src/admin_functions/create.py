@@ -32,5 +32,14 @@ def create_government(gov_features) -> Government:
         list_of_acts=list_of_acts
     )
 
-def create_act():
-    return 0
+def create_act(act_features) -> Act:
+    act_id = validate_int(act_features["act_id"])
+    title = validate_string(act_features["title"])
+    description = validate_string(act_features["description"])
+    link = validate_string(act_features["act_link"])
+    return Act(
+        act_id=act_id,
+        title=title,
+        description=description,
+        act_link=link
+    )

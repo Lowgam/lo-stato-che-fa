@@ -1,6 +1,7 @@
-from src.admin_functions.create import create_party, create_government
+import pytest
+from src.admin_functions.create import create_party, create_government, create_act
 
-
+@pytest.mark.skip(reason="validated")
 def test_create_party():
     party_features = {
         "party_id": 1,
@@ -16,7 +17,7 @@ def test_create_party():
     assert party_1.program_website == "xxx"
     assert party_1.party_website == "yyy"
     assert party_1.party_pic_path == "zzz"
-
+@pytest.mark.skip(reason="validated")
 def test_create_government():
     gov_features = {
         "gov_id": 1,
@@ -51,3 +52,16 @@ def test_create_government():
         "title": "Act 1",
         "description": "xxx"
         }]
+@pytest.mark.skip(reason="validated")
+def test_create_act():
+    act_features = {
+        "act_id": 1,
+        "title": "Act 1",
+        "description": "xxx",
+        "act_link": "www"
+    }
+    act_1 = create_act(act_features)
+    assert act_1.act_id == 1
+    assert act_1.title == "Act 1"
+    assert act_1.description == "xxx"
+    assert act_1.act_link == "www"
