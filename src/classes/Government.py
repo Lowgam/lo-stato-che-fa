@@ -1,5 +1,5 @@
-from Act import Act
-from Party import Party
+from src.classes.Act import Act
+from src.classes.Party import Party
 
 from typing import List
 
