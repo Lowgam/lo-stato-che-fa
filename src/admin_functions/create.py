@@ -1,5 +1,3 @@
-from typing import Dict, List
-
 from src.classes.Party import Party
 from src.classes.Government import Government
 from src.classes.Act import Act
