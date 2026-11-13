@@ -4,4 +4,7 @@
     <option name="sdkName" value="Python 3.13 (Business_Inventory_Suite)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 virtualenv at ~/Documents/Lavoro/Software_Dev/Coding/Projects/Business_Inventory_Suite/software/backend/.venv" project-jdk-type="Python SDK" />
+  <component name="PythonCompatibilityInspectionAdvertiser">
+    <option name="version" value="3" />
+  </component>
 </project>
