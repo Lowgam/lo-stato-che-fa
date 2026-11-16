@@ -9,4 +9,4 @@ class PartiesInGovernment(Base):
     party_id = Column(Integer, ForeignKey('party.party_id'), nullable=False)
     government_id = Column(Integer, ForeignKey('government.government_id'), nullable=False)
 
-    __table_args__ = (UniqueConstraint('party_id', 'government_id', name='Unique_party_gov'))
+    __table_args__ = (UniqueConstraint('party_id', 'government_id', name='Unique_party_gov'),)
