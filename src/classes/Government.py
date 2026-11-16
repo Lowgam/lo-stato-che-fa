@@ -1,11 +1,7 @@
 from sqlalchemy import Column, Integer, Boolean, CheckConstraint
 from sqlalchemy.orm import relationship
 
-from src.classes.Act import Act
-from src.classes.Party import Party
 from src.classes.Base import Base
-
-from typing import List
 
 class Government(Base):
     __tablename__ = 'government'
