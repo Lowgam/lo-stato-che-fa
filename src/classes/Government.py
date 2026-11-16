@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Boolean
+from sqlalchemy import Column, Integer, Boolean, CheckConstraint
 from sqlalchemy.orm import relationship
 
 from src.classes.Act import Act
@@ -9,6 +9,7 @@ from typing import List
 
 class Government(Base):
     __tablename__ = 'government'
+    __table_args__ = (CheckConstraint("government_name <> ''", name='party_name_not_space'),)
 
     government_id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, unique=True)
 

@@ -1,10 +1,11 @@
 from sqlalchemy.orm import relationship
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, CheckConstraint
 
 from src.classes.Base import Base
 
 class Party(Base):
     __tablename__ = "party"
+    __table_args__ = (CheckConstraint("party_name <> ''", name='party_name_not_space'),)
 
     party_id = Column(Integer, primary_key=True)
     party_name = Column(String(30), nullable=False, unique=True)
@@ -13,5 +14,3 @@ class Party(Base):
 
     party_program_rel = relationship('PartyProgram', back_populates='party_rel')
     government_rel = relationship('Government', secondary='parties_in_government', back_populates='party_rel')
-
-
