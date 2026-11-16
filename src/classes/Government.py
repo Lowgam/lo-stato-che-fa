@@ -5,7 +5,6 @@ from src.classes.Base import Base
 
 class Government(Base):
     __tablename__ = 'government'
-    __table_args__ = (CheckConstraint("government_name <> ''", name='party_name_not_space'),)
 
     government_id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, unique=True)
 
