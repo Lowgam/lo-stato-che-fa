@@ -1,10 +1,16 @@
-class Act:
-    def __init__(self,
-                 act_id: int,
-                 title: str,
-                 description: str,
-                 act_link: str):
-        self.act_id = act_id
-        self.title = title
-        self.description = description
-        self.act_link = act_link
+from sqlalchemy import Column, Integer, Text, ForeignKey
+from sqlalchemy.orm import relationship
+
+from src.classes.Base import Base
+
+class Act(Base):
+    __tablename__ = 'act'
+
+    act_id = Column(Integer, primary_key=True)
+    government_id = Column(ForeignKey('government.government_id'), nullable=False)
+
+    act_title = Column(Text)
+    act_description = Column(Text)
+    act_link = Column(Text)
+
+    government_rel = relationship("Government", back_populates="act_rel")
