@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from src.classes.Base import Base
 
 class PartyProgram(Base):
-    __tablename__ = 'party-program'
+    __tablename__ = 'party_program'
 
     program_id = Column(Integer, primary_key=True)
     party_id = Column(ForeignKey('party.party_id'), nullable=False)
