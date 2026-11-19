@@ -8,7 +8,7 @@ class Act(Base):
     __table_args__ = (CheckConstraint("act_title <> ''", name='party_name_not_space'),)
 
     act_id = Column(Integer, primary_key=True)
-    government_id = Column(ForeignKey('government.government_id'), nullable=False)
+    government_id = Column(ForeignKey('government.government_id', ondelete='CASCADE'), nullable=False)
 
     act_title = Column(Text)
     act_description = Column(Text)

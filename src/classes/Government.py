@@ -11,5 +11,6 @@ class Government(Base):
     year = Column(Integer)
     is_current = Column(Boolean, default=True, nullable=False)
 
-    act_rel = relationship("Act", back_populates="government_rel")
-    party_rel = relationship('Party', secondary='parties_in_government', back_populates='government_rel')
+    act_rel = relationship("Act", back_populates="government_rel", passive_deletes=True, cascade="all, delete")
+
+    party_rel = relationship('Party', secondary='party_in_government', back_populates='government_rel', passive_deletes=True)

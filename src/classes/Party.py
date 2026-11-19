@@ -12,5 +12,6 @@ class Party(Base):
     party_website = Column(Text, nullable=False)
     party_pic_path = Column(String(20), nullable=False)
 
-    party_program_rel = relationship('PartyProgram', back_populates='party_rel')
-    government_rel = relationship('Government', secondary='parties_in_government', back_populates='party_rel')
+    party_program_rel = relationship('PartyProgram', back_populates='party_rel', passive_deletes=True)
+
+    government_rel = relationship('Government', secondary='party_in_government', back_populates='party_rel')
