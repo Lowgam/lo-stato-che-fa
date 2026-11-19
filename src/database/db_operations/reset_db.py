@@ -4,7 +4,7 @@ from src.classes.Party import Party
 from src.classes.Government import Government
 from src.classes.Act import Act
 from src.classes.PartyProgram import PartyProgram
-from src.classes.Parties_In_Government import PartiesInGovernment
+from src.classes.Party_In_Government import PartyInGovernment
 
 
 print("Tabelle registrate:", list(Base.metadata.tables))
