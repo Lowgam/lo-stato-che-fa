@@ -1,6 +1,6 @@
 from sqlalchemy import Column, ForeignKey, Integer, UniqueConstraint
 
-from admin.src.classes.Base import Base
+from backend_admin.classes.Base import Base
 
 class PartyInGovernment(Base):
     __tablename__ = 'party_in_government'

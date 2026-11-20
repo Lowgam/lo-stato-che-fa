@@ -1,6 +1,6 @@
 from contextlib import contextmanager
 
-from admin.src.database.session import SessionLocal
+from backend_admin.database.db_connection.session import SessionLocal
 
 @contextmanager
 def get_session():

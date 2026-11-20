@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, Text, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 
-from admin.src.classes.Base import Base
+from backend_admin.classes.Base import Base
 
 class PartyProgram(Base):
     __tablename__ = 'party_program'
