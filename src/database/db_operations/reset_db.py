@@ -6,7 +6,6 @@ from src.classes.Act import Act
 from src.classes.PartyProgram import PartyProgram
 from src.classes.Party_In_Government import PartyInGovernment
 
-
 print("Tabelle registrate:", list(Base.metadata.tables))
 print("Destinazione:", engine.url.host, engine.url.port, engine.url.database)
 
