@@ -1,11 +1,11 @@
 import pytest
-from admin.src.admin_functions.create import create_party, create_government, create_act
-from admin.src.database.db_operations.insert import create_new_party, create_new_government, create_new_party_program, create_new_party_in_government
-from admin.src.classes.Party import Party
-from admin.src.classes.Government import Government
-from admin.src.classes.PartyProgram import PartyProgram
-from admin.src.classes.Party_In_Government import PartyInGovernment
-from admin.src.database.context_manager import get_session
+from backend_admin.admin_functions.create import create_party, create_government, create_act
+from backend_admin.database.db_operations.insert import create_new_party, create_new_government, create_new_party_program, create_new_party_in_government
+from backend_admin.classes.Party import Party
+from backend_admin.classes.Government import Government
+from backend_admin.classes.PartyProgram import PartyProgram
+from backend_admin.classes.Party_In_Government import PartyInGovernment
+from backend_admin.database.db_connection.context_manager import get_session
 
 #First tests
 @pytest.mark.skip(reason="validated")

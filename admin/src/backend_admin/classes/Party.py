@@ -1,7 +1,7 @@
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, Text, CheckConstraint
 
-from admin.src.classes.Base import Base
+from backend_admin.classes.Base import Base
 
 class Party(Base):
     __tablename__ = "party"
