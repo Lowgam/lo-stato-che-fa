@@ -7,7 +7,7 @@ class PartyProgram(Base):
     __tablename__ = 'party_program'
 
     program_id = Column(Integer, primary_key=True)
-    party_id = Column(ForeignKey('party.party_id', ondelete='RESTRICT'), nullable=False)
+    party_id = Column(ForeignKey('party.party_id', ondelete='CASCADE'), nullable=False)
 
     year = Column(Integer)
     program_website = Column(Text)
