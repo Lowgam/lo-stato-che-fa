@@ -34,5 +34,5 @@ def update_act(act_to_update: Act):
         if act:
             act.act_title = act_to_update.act_title
             act.act_description = act_to_update.act_description
-            act.act_linkact_link = act_to_update.act_link
+            act.act_link = act_to_update.act_link
             
