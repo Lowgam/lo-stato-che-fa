@@ -1,7 +1,7 @@
-from src.classes.Party import Party
-from src.classes.Government import Government
-from src.classes.Act import Act
-from src.utilities.validators import validate_string, validate_int
+from admin.src.classes.Party import Party
+from admin.src.classes.Government import Government
+from admin.src.classes.Act import Act
+from admin.src.utilities.validators import validate_string, validate_int
 
 
 def create_party(party_features) -> Party:

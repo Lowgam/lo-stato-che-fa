@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, Text, ForeignKey, CheckConstraint
 from sqlalchemy.orm import relationship
 
-from src.classes.Base import Base
+from admin.src.classes.Base import Base
 
 class Act(Base):
     __tablename__ = 'act'

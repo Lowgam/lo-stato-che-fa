@@ -1,7 +1,7 @@
-from sqlalchemy import Column, Integer, Boolean, CheckConstraint
+from sqlalchemy import Column, Integer, Boolean
 from sqlalchemy.orm import relationship
 
-from src.classes.Base import Base
+from admin.src.classes.Base import Base
 
 class Government(Base):
     __tablename__ = 'government'

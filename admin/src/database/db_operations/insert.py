@@ -1,9 +1,8 @@
-from src.classes.Party import Party
-from src.classes.PartyProgram import PartyProgram
-from src.classes.Government import Government
-from src.classes.Party_In_Government import PartyInGovernment
-from src.classes.Act import Act
-from src.database.context_manager import get_session
+from admin.src.classes.Party import Party
+from admin.src.classes.PartyProgram import PartyProgram
+from admin.src.classes.Government import Government
+from admin.src.classes.Act import Act
+from admin.src.database.context_manager import get_session
 
 def create_new_party(party_details : dict):
     with get_session() as session:
