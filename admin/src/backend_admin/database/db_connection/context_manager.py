@@ -11,5 +11,6 @@ def get_session():
     except Exception as e :
         session.rollback() # in case of error, rollback
         print(f"Error: {e}")
+        raise
     finally:
         session.close() # close the session
