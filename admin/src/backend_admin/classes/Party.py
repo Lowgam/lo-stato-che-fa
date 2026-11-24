@@ -1,5 +1,5 @@
 from sqlalchemy.orm import relationship
-from sqlalchemy import Column, Integer, String, Text, CheckConstraint
+from sqlalchemy import Column, Integer, String, Text, CheckConstraint, Boolean
 
 from backend_admin.classes.Base import Base
 
@@ -11,6 +11,7 @@ class Party(Base):
     party_name = Column(String(30), nullable=False, unique=True)
     party_website = Column(Text, nullable=False)
     party_pic_path = Column(String(20), nullable=False)
+    is_archived = Column(Boolean, nullable=False, default=False)
 
     party_program_rel = relationship('PartyProgram', back_populates='party_rel', passive_deletes=True, cascade="all, delete")
 
