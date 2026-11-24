@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Text, ForeignKey, CheckConstraint
+from sqlalchemy import Column, Integer, Text, ForeignKey, CheckConstraint, String
 from sqlalchemy.orm import relationship
 
 from backend_admin.classes.Base import Base
@@ -11,6 +11,7 @@ class Act(Base):
     government_id = Column(ForeignKey('government.government_id', ondelete='CASCADE'), nullable=False)
 
     act_title = Column(Text)
+    date_of_approval = Column(String(20))
     act_description = Column(Text)
     act_link = Column(Text)
 
