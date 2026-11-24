@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from sqlalchemy import select
 
 from backend_admin.classes.Party import Party
@@ -15,6 +14,3 @@ def select_party_details(p_id : int):
         stmt = select(Party).where(Party.party_id == p_id)
         result = session.execute(stmt).scalar()
         return result
-=======
-
->>>>>>> c19744c14254a88a7fa751eca240214068fcc740
