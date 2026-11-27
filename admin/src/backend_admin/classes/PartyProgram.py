@@ -12,5 +12,7 @@ class PartyProgram(Base):
     year = Column(Integer)
     program_website = Column(Text)
     is_current = Column(Boolean, default=True)
+    source_pdf_path = Column(Text)
+    processed_pdf_path = Column(Text)
 
     party_rel = relationship('Party', back_populates='party_program_rel')

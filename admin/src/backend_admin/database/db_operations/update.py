@@ -20,6 +20,8 @@ def update_party_program(party_program_to_update: PartyProgram):
             party_program.year = party_program_to_update.year
             party_program.program_website = party_program_to_update.program_website
             party_program.is_current = party_program_to_update.is_current
+            party_program.source_pdf_path = party_program_to_update.source_pdf_path
+            party_program.processed_pdf_path = party_program_to_update.processed_pdf_path
 
 def update_government(government_to_update: Government):
     with get_session() as session:

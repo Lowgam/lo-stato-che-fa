@@ -19,6 +19,8 @@ def create_new_party_program(party_program_details : dict):
             party_id = party_program_details["party_id"],
             year = party_program_details["year"],
             program_website = party_program_details["program_website"],
+            source_pdf_path = party_program_details["source_pdf_path"],
+            processed_pdf_path = party_program_details["processed_pdf_path"],
         )
         session.add(new_party_program)
 
