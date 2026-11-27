@@ -2,6 +2,7 @@ from backend_admin.classes.Party import Party
 from backend_admin.classes.PartyProgram import PartyProgram
 from backend_admin.classes.Government import Government
 from backend_admin.classes.Act import Act
+from backend_admin.classes.Party_In_Government import PartyInGovernment
 from backend_admin.database.db_connection.context_manager import get_session
 
 def update_party(party_to_update: Party):
@@ -34,4 +35,10 @@ def update_act(act_to_update: Act):
             act.act_title = act_to_update.act_title
             act.act_description = act_to_update.act_description
             act.act_link = act_to_update.act_link
-            
+
+def update_party_in_government(g_to_update: Government, p_to_update: Party, pg_to_update: PartyInGovernment):
+    with get_session() as session:
+        par_gov = session.get(PartyInGovernment, pg_to_update.government_id)
+        if par_gov:
+            par_gov.government_id = g_to_update.government_id
+            par_gov.party_id = p_to_update.party_id
