@@ -1,11 +1,7 @@
 from sqlalchemy import Column, Integer, Boolean
 from sqlalchemy.orm import relationship
 
-from src.classes.Act import Act
-from src.classes.Party import Party
-from src.classes.Base import Base
-
-from typing import List
+from backend_admin.classes.Base import Base
 
 class Government(Base):
     __tablename__ = 'government'
@@ -15,5 +11,6 @@ class Government(Base):
     year = Column(Integer)
     is_current = Column(Boolean, default=True, nullable=False)
 
-    act_rel = relationship("Act", back_populates="government_rel")
-    party_rel = relationship('Party', secondary='parties_in_government', back_populates='government_rel')
+    act_rel = relationship("Act", back_populates="government_rel", passive_deletes=True, cascade="all, delete")
+
+    party_rel = relationship('Party', secondary='party_in_government', back_populates='government_rel', passive_deletes=True)

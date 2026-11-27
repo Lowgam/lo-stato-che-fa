@@ -12,4 +12,4 @@ url = URL.create(
     database=os.environ["DB_NAME"],
 )
 
-engine = create_engine(url)
+engine = create_engine(url, echo=True)
